@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Phase 2, Geetanjali City, Khamtarai Restaurants, Restaurants in Phase 2,
+      Geetanjali City, Khamtarai - Zomato
+    </title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div id="navbar-container" class="container">
+        <!--Logo-->
+        <a href="#" class="navbar-brand"
+          ><img id="logo-navbar" src="../static/images/logo.webp"
+        /></a>
+        <!--Search Bar-->
+        <div id="search-wrapper" class="input-group rounded">
+          <div class="btn-group">
+            <span
+              class="input-group-text border-0"
+              style="background-color: white"
+            >
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: rgb(245, 112, 130)"
+              ></i>
+            </span>
+            <input
+              id="navbar-search-1"
+              class="form-control"
+              type="search"
+              placeholder="Phase 2, Geetanjali City, Khamtarai Restaurants, Restaurants in Phase 2,
+              Geetanjali City, Khamtarai - Zomato"
+              aria-label="search"
+            />
+            <button
+              id="location-button"
+              type="button"
+              class="btn dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></button>
+
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              style="width: 400px; z-index: 2"
+            >
+              <div class="dropdown-item">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    color: rgb(245, 112, 130);
+                  "
+                >
+                  <i class="material-icons">my_location</i>
+                  <div>&nbsp; Detect current location</div>
+                </div>
+                <div>Using GPS</div>
+              </div>
+              <div class="dropdown-item">+ Add address</div>
+              <div class="dropdown-item">Saved Addresses</div>
+              <div class="dropdown-item" style="overflow: hidden">
+                <div>Home</div>
+                <div>
+                  368 Geetanjali City Phase 2 Bahatarai Road Bilaspur
+                  Chhattisgarh
+                </div>
+              </div>
+              <div class="dropdown-item" style="overflow: hidden">
+                <div>Home</div>
+                <div>
+                  28 Geetanjali City Phase 1 Bahatarai Road Bilaspur
+                  Chhattisgarh
+                </div>
+              </div>
+              <div class="dropdown-item">Recent Locations</div>
+              <div class="dropdown-item">
+                Phase 2, Geetanjali City, Khamtarai
+              </div>
+            </div>
+          </div>
+          <span
+            class="input-group-text border-0"
+            style="background-color: white"
+          >
+            <i class="fas fa-search" id="search-icon"></i>
+          </span>
+          <input
+            id="navbar-search-2"
+            class="form-control"
+            type="search"
+            placeholder="Search for restuarant, cuisine or a dish"
+            aria-label="search"
+          />
+        </div>
+        <!--Profile Dropdown-->
+        <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://www.alchinlong.com/wp-content/uploads/2015/09/sample-profile.png"
+              width="45"
+              height="45"
+              class="rounded-circle"
+            />
+            Siddhant
+          </a>
+
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuLink"
+            style="z-index: 2"
+          >
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Bookmarks</a></li>
+            <li><a class="dropdown-item" href="#">Reviews</a></li>
+            <li><a class="dropdown-item" href="#">Network</a></li>
+            <li><a class="dropdown-item" href="#">Find friends</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Delivery and Nutrition Tab-->
+    <div class="container">
+      <div class="nav-tabs row">
+        <div
+          class="nav-item col-md-2 del-nutri"
+          style="
+            color: rgb(245, 112, 130);
+            border-bottom: 2px solid rgb(245, 112, 130);
+          "
+        >
+          <div class="navtab-del-nutri">
+            <img class="navtab-img" src="../static/images/img-1.webp" />
+          </div>
+          <h5>&nbsp; Delivery</h5>
+        </div>
+        <div
+          class="nav-item col-md-2 del-nutri"
+          style="color: rgb(105, 105, 105)"
+        >
+          <div
+            class="navtab-del-nutri"
+            style="background-color: rgb(248, 248, 248)"
+          >
+            <img class="navtab-img" src="../static/images/img-2.webp" />
+          </div>
+          <h5>&nbsp;Nutrition</h5>
+        </div>
+      </div>
+    </div>
+    <!--Sticky Filters-->
+    <div
+      class="container-fluid sticky-top"
+      style="background-color: white; z-index: 1"
+    >
+      <br />
+      <div class="container">
+        <button type="button" class="btn btn-outline-secondary shadow-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#9C9C9C"
+            width="18"
+            height="18"
+            viewBox="0 0 20 20"
+            aria-labelledby="icon-svg-title- icon-svg-desc-"
+            role="img"
+            class="rbbb40-0 ZGPg"
+          >
+            <title>filter</title>
+            <path
+              d="M2.14 6.42h7.26c0.353 1.207 1.45 2.074 2.75 2.074s2.397-0.867 2.745-2.054l0.005-0.020h2.96c0.343-0.059 0.6-0.355 0.6-0.71s-0.258-0.651-0.596-0.709l-0.004-0.001h-2.94c-0.341-1.226-1.447-2.11-2.76-2.11s-2.419 0.885-2.755 2.090l-0.005 0.020h-7.26c-0.343 0.059-0.6 0.355-0.6 0.71s0.257 0.651 0.596 0.709l0.004 0.001zM12.16 4.28c0.776 0.011 1.4 0.643 1.4 1.42 0 0.784-0.636 1.42-1.42 1.42-0.777 0-1.409-0.624-1.42-1.399l-0-0.001c-0-0.006-0-0.013-0-0.020 0-0.784 0.636-1.42 1.42-1.42 0.007 0 0.014 0 0.021 0l-0.001-0zM17.86 13.58h-7.24c-0.328-1.245-1.443-2.148-2.77-2.148s-2.442 0.903-2.766 2.128l-0.004 0.020h-2.94c-0.036-0.006-0.077-0.010-0.12-0.010-0.398 0-0.72 0.322-0.72 0.72s0.322 0.72 0.72 0.72c0.042 0 0.084-0.004 0.124-0.011l-0.004 0.001h2.96c0.353 1.207 1.45 2.074 2.75 2.074s2.397-0.867 2.745-2.054l0.005-0.020h7.26c0.343-0.059 0.6-0.355 0.6-0.71s-0.258-0.651-0.596-0.709l-0.004-0.001zM7.84 15.72c-0.776-0.011-1.4-0.643-1.4-1.42 0-0.784 0.636-1.42 1.42-1.42 0.777 0 1.409 0.624 1.42 1.399l0 0.001c0 0.006 0 0.013 0 0.020 0 0.784-0.636 1.42-1.42 1.42-0.007 0-0.014-0-0.021-0l0.001 0z"
+            ></path>
+          </svg>
+          Filters
+        </button>
+        <button type="button" class="btn btn-outline-secondary shadow-none">
+          Rating: 4.0+
+        </button>
+        <button type="button" class="btn btn-outline-secondary shadow-none">
+          Safe and Hygenic
+        </button>
+        <button type="button" class="btn btn-outline-secondary shadow-none">
+          Pure Veg
+        </button>
+        <button type="button" class="btn btn-outline-secondary shadow-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#9C9C9C"
+            width="18"
+            height="18"
+            viewBox="0 0 20 20"
+            aria-labelledby="icon-svg-title- icon-svg-desc-"
+            role="img"
+            class="rbbb40-0 ZGPg"
+          >
+            <path
+              d="M9.9,14.8l-2.3,2.3V9c0-0.5-0.4-0.8-0.8-0.8S5.9,8.5,5.9,9v8.2l-2.3-2.3c0,0,0,0,0,0c-0.3-0.3-0.9-0.3-1.2,0 c-0.3,0.3-0.3,0.8,0,1.2l3.7,3.7c0.3,0.3,0.8,0.3,1.2,0l3.7-3.7c0.2-0.2,0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6 C10.8,14.5,10.3,14.5,9.9,14.8z"
+            ></path>
+            <path
+              d="M17.6,4l-3.7-3.7c-0.3-0.3-0.8-0.3-1.2,0L8.9,4C8.7,4.1,8.6,4.4,8.7,4.6c0,0.2,0.1,0.4,0.2,0.6c0.3,0.3,0.8,0.3,1.2,0 l2.3-2.3V11c0,0.5,0.4,0.8,0.8,0.8c0.5,0,0.8-0.4,0.8-0.8V2.9l2.3,2.3c0,0,0,0,0,0c0.3,0.3,0.9,0.3,1.2,0C17.9,4.8,17.9,4.3,17.6,4 z"
+            ></path>
+          </svg>
+          Delivery Time
+        </button>
+      </div>
+      <br />
+    </div>
+    <!--Order Again Section-->
+    <div
+      class="container-fluid mt-1"
+      style="background-color: rgb(248, 248, 248)"
+    >
+      <div class="container">
+        <div class="row">
+          <h3 class="mt-3">Order Again</h3>
+          <div
+            id="carouselControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="false"
+          >
+            <div class="carousel-inner mt-3">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/maosaji.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Maosaji</h5>
+                          <p class="card-text text-muted">40 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/balle_balle.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Balle Balle</h5>
+                          <p class="card-text text-muted">34 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/roll_sholl.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Roll Sholl</h5>
+                          <p class="card-text text-muted">39 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/daawat_e_dilli.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Daawat E Dilli</h5>
+                          <p class="card-text text-muted">37 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/momo_panda.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">The Momo's Panda</h5>
+                          <p class="card-text text-muted">40 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/china_bowl.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">China Bowl</h5>
+                          <p class="card-text text-muted">45 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/box_office.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Box Office</h5>
+                          <p class="card-text text-muted">49 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="../static/images/wow_fills.webp"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Wowfills</h5>
+                          <p class="card-text text-muted">29 min</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="left carousel-control"
+              data-bs-slide="prev"
+              data-bs-target="#carouselControls"
+            >
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div
+              class="right carousel-control"
+              data-bs-slide="next"
+              data-bs-target="#carouselControls"
+            >
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <!--Eat What Makes you happy section-->
+        <div class="row mt-5">
+          <h3 class="mt-3">Eat what makes you happy</h3>
+          <div
+            id="carousel-2-Controls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="false"
+          >
+            <div class="carousel-inner mt-3">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/173bc40a5058e328f998f55eed7b7a7f1612459047.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Momo</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/c598d69f4864f3cba4b0de2d8efc0e521612436494.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Pizza</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/76d788a2600b609bb0a08443e03df95b.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Biryani</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/6e69685d22c94ffd42ccd7e70e246bd9.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Burger</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/742929dcb631403d7c1c1efad2ca2700.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Chicken</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/770ba11e5159e6740d68f71f1b838a261612463246.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Cake</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/aebeb88b78a4a83ea9e727f234899bed1602781186.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Chaat</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/4a04890400b5d7bac101baace5d7e994.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Sandwich</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/eb2ef145c0fcad44dbb4ed26aad1527d.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Rolls</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/homepage_dish_data/4/04e1dbc0ec30031e5f26d0bef922ea0c.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Paneer</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/87d7c630082f7fc8cfc5ad917e7228021602870921.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Samosa</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-3">
+                    <a class="card-links" href="#" style="color: black">
+                      <div class="card">
+                        <img
+                          src="https://b.zmtcdn.com/data/dish_images/83befdecd77e57a8c53d22b67d0b866d1612437905.png"
+                          class="card-img-top image-order-again"
+                        />
+                        <div class="card-body">
+                          <h5 class="card-title">Dosa</h5>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="left carousel-control"
+              data-bs-slide="prev"
+              data-bs-target="#carousel-2-Controls"
+            >
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div
+              class="right carousel-control"
+              data-bs-slide="next"
+              data-bs-target="#carousel-2-Controls"
+            >
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Restaurent Section-->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+    <!--Javascript Imports-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../static/js/scripts.js"></script>
+  </body>
+</html>

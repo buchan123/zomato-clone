@@ -145,6 +145,20 @@ h5 {
   border: 4px solid rgb(245, 112, 130);
 }
 
+.top-brands-img-container {
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border: 0.5px solid rgb(232, 232, 232);
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 8%) 0px 3px 12px;
+  border-radius: 10%;
+}
+
+.top-brands-img {
+  height: 100%;
+  width: 100%;
+}
+
 #end-of-search {
   display: flex;
   justify-content: center;

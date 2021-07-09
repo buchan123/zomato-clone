@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://b.zmtcdn.com/images/logo/zomato_logo_2017.png"
+    />
+    <title>Zomato - Restaurant</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-light bg-light">
+      <div id="navbar-container" class="container">
+        <!--Logo-->
+        <a href="#" class="navbar-brand"
+          ><img id="logo-navbar" src="../static/images/logo.webp"
+        /></a>
+        <!--Search Bar-->
+        <div id="search-wrapper" class="input-group rounded">
+          <div class="btn-group">
+            <span
+              class="input-group-text border-0"
+              style="background-color: white"
+            >
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: rgb(245, 112, 130)"
+              ></i>
+            </span>
+            <input
+              id="navbar-search-1"
+              class="form-control"
+              type="search"
+              placeholder="Phase 2, Geetanjali City, Khamtarai Restaurants, Restaurants in Phase 2,
+              Geetanjali City, Khamtarai - Zomato"
+              aria-label="search"
+            />
+            <button
+              id="location-button"
+              type="button"
+              class="btn dropdown-toggle dropdown-toggle-split"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            ></button>
+
+            <div
+              class="dropdown-menu dropdown-menu-right mt-2"
+              style="width: 400px; z-index: 2"
+            >
+              <div class="dropdown-item">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    color: rgb(245, 112, 130);
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ED5A6B"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 20 20"
+                    aria-labelledby="icon-svg-title- icon-svg-desc-"
+                    role="img"
+                  >
+                    <title>current-location</title>
+                    <path
+                      d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z"
+                    ></path>
+                  </svg>
+                  <div>&nbsp; Detect current location</div>
+                </div>
+                <p class="ms-4 text-muted">Using GPS</p>
+              </div>
+              <div
+                class="dropdown-item"
+                style="color: #f57082; display: flex; align-items: center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#F57082"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  aria-labelledby="icon-svg-title- icon-svg-desc-"
+                  role="img"
+                >
+                  <title>plus</title>
+                  <path
+                    d="M15.5 9.42h-4.5v-4.5c0-0.56-0.44-1-1-1s-1 0.44-1 1v4.5h-4.5c-0.56 0-1 0.44-1 1s0.44 1 1 1h4.5v4.5c0 0.54 0.44 1 1 1s1-0.46 1-1v-4.5h4.5c0.56 0 1-0.46 1-1s-0.44-1-1-1z"
+                  ></path>
+                </svg>
+                &nbsp; Add address
+              </div>
+              <div class="dropdown-item mt-3 disabled" style="color: black">
+                <h5>Saved Addresses</h5>
+              </div>
+              <div class="dropdown-item" style="overflow: hidden">
+                <div class="row">
+                  <div class="col-md-1" style="align-self: center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#1C1C1C"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 20 20"
+                      aria-labelledby="icon-svg-title- icon-svg-desc-"
+                      role="img"
+                    >
+                      <path
+                        d="M19.76 7.84001L10.4 0.560011L10.28 0.500011H10.2C10.14 0.480011 10.0717 0.469177 10 0.469177C9.92835 0.469177 9.86002 0.480844 9.79502 0.501677L9.80002 0.500011H9.72002L9.62002 0.540011L6.66002 2.84001V1.46001C6.64919 1.12168 6.37835 0.850844 6.04085 0.840011H6.04002H3.76002C3.41335 0.840011 3.13169 1.11501 3.12002 1.45918V1.46001V5.62001L0.240021 7.84001C0.0941878 7.95418 0.000854492 8.13084 0.000854492 8.32918C0.000854492 8.47751 0.0533545 8.61418 0.140854 8.72168L0.140021 8.72084C0.254188 8.86084 0.427521 8.95001 0.621688 8.95001C0.765021 8.95001 0.896688 8.90168 1.00169 8.82001L1.00002 8.82084L2.30002 7.82084V16.4608C2.31085 16.7992 2.58169 17.07 2.91919 17.0808H2.92002H17.08C17.4184 17.07 17.6892 16.7992 17.7 16.4617V16.4608V7.82084L19 8.82084C19.1025 8.90584 19.235 8.95751 19.3792 8.96084H19.38C19.575 8.95751 19.7475 8.86501 19.8592 8.72251L19.86 8.72084C19.9467 8.61501 19.9992 8.47834 19.9992 8.33001C19.9992 8.13168 19.9067 7.95584 19.7617 7.84168L19.76 7.84084V7.84001ZM4.38002 4.50001V2.08001H5.42002V3.82001L5.36002 3.86001L4.38002 4.50001ZM7.92002 15.84V10.42H12.08V15.84H7.92002ZM16.46 15.84H13.34V9.80001C13.34 9.44668 13.0534 9.16001 12.7 9.16001H7.30002C6.94669 9.16001 6.66002 9.44668 6.66002 9.80001V15.84H3.54002V6.96001L10 1.84001L16.46 6.96001V15.84ZM18.76 17.7H1.26002C0.911688 17.7 0.630021 17.9817 0.630021 18.33C0.630021 18.6783 0.911688 18.96 1.26002 18.96H18.76C19.1084 18.96 19.39 18.6783 19.39 18.33C19.39 17.9817 19.1084 17.7 18.76 17.7Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="col-md-11">
+                    <div style="font-size: 1.2rem">Home</div>
+                    <div style="font-size: 0.9rem; color: grey">
+                      368 Geetanjali City Phase 2 Bahatarai Road Bilaspur
+                      Chhattisgarh
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-item" style="overflow: hidden">
+                <div class="row">
+                  <div class="col-md-1" style="align-self: center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#1C1C1C"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 20 20"
+                      aria-labelledby="icon-svg-title- icon-svg-desc-"
+                      role="img"
+                    >
+                      <path
+                        d="M19.76 7.84001L10.4 0.560011L10.28 0.500011H10.2C10.14 0.480011 10.0717 0.469177 10 0.469177C9.92835 0.469177 9.86002 0.480844 9.79502 0.501677L9.80002 0.500011H9.72002L9.62002 0.540011L6.66002 2.84001V1.46001C6.64919 1.12168 6.37835 0.850844 6.04085 0.840011H6.04002H3.76002C3.41335 0.840011 3.13169 1.11501 3.12002 1.45918V1.46001V5.62001L0.240021 7.84001C0.0941878 7.95418 0.000854492 8.13084 0.000854492 8.32918C0.000854492 8.47751 0.0533545 8.61418 0.140854 8.72168L0.140021 8.72084C0.254188 8.86084 0.427521 8.95001 0.621688 8.95001C0.765021 8.95001 0.896688 8.90168 1.00169 8.82001L1.00002 8.82084L2.30002 7.82084V16.4608C2.31085 16.7992 2.58169 17.07 2.91919 17.0808H2.92002H17.08C17.4184 17.07 17.6892 16.7992 17.7 16.4617V16.4608V7.82084L19 8.82084C19.1025 8.90584 19.235 8.95751 19.3792 8.96084H19.38C19.575 8.95751 19.7475 8.86501 19.8592 8.72251L19.86 8.72084C19.9467 8.61501 19.9992 8.47834 19.9992 8.33001C19.9992 8.13168 19.9067 7.95584 19.7617 7.84168L19.76 7.84084V7.84001ZM4.38002 4.50001V2.08001H5.42002V3.82001L5.36002 3.86001L4.38002 4.50001ZM7.92002 15.84V10.42H12.08V15.84H7.92002ZM16.46 15.84H13.34V9.80001C13.34 9.44668 13.0534 9.16001 12.7 9.16001H7.30002C6.94669 9.16001 6.66002 9.44668 6.66002 9.80001V15.84H3.54002V6.96001L10 1.84001L16.46 6.96001V15.84ZM18.76 17.7H1.26002C0.911688 17.7 0.630021 17.9817 0.630021 18.33C0.630021 18.6783 0.911688 18.96 1.26002 18.96H18.76C19.1084 18.96 19.39 18.6783 19.39 18.33C19.39 17.9817 19.1084 17.7 18.76 17.7Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="col-md-11">
+                    <div style="font-size: 1.2rem">Home</div>
+                    <div style="font-size: 0.9rem; color: grey">
+                      B-157 Vasant Vihar Bilaspur Chhattisgarh
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-item mt-3 disabled" style="color: black">
+                <h5>Recent Locations</h5>
+              </div>
+              <div class="dropdown-item">
+                <div class="row">
+                  <div class="col-md-1" style="align-self: center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#1C1C1C"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 20 20"
+                      aria-labelledby="icon-svg-title- icon-svg-desc-"
+                      role="img"
+                    >
+                      <path
+                        d="M14.76 9.040h-4.22l-2.58-4.28c-0.147-0.354-0.489-0.598-0.889-0.598-0.53 0-0.96 0.43-0.96 0.96 0 0.227 0.079 0.436 0.211 0.6l-0.001-0.002 2.86 4.76c0.172 0.278 0.474 0.46 0.82 0.46 0 0 0 0 0.001 0h4.76c0.467-0.070 0.822-0.469 0.822-0.95s-0.354-0.88-0.817-0.949l-0.005-0.001zM10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c0-5.523-4.477-10-10-10v0zM10 18.58c-4.739 0-8.58-3.841-8.58-8.58s3.841-8.58 8.58-8.58c4.739 0 8.58 3.841 8.58 8.58v0c0 4.739-3.841 8.58-8.58 8.58v0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="col-md-11">
+                    <div>Vasant Vihar,Bilaspur,Chhattisgarh</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span
+            class="input-group-text border-0"
+            style="background-color: white"
+          >
+            <i class="fas fa-search" id="search-icon"></i>
+          </span>
+          <input
+            id="navbar-search-2"
+            class="form-control"
+            type="search"
+            placeholder="Search for restuarant, cuisine or a dish"
+            aria-label="search"
+          />
+        </div>
+        <!--Profile Dropdown-->
+        <div class="dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://www.alchinlong.com/wp-content/uploads/2015/09/sample-profile.png"
+              width="45"
+              height="45"
+              class="rounded-circle"
+            />
+            Siddhant
+          </a>
+
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="dropdownMenuLink"
+            style="z-index: 2"
+          >
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><a class="dropdown-item" href="#">Bookmarks</a></li>
+            <li><a class="dropdown-item" href="#">Reviews</a></li>
+            <li><a class="dropdown-item" href="#">Network</a></li>
+            <li><a class="dropdown-item" href="#">Find friends</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row mt-3 ms-1">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#" class="breadcrumb-link">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="breadcrumb-link">India</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="breadcrumb-link">Bilaspur</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="breadcrumb-link">Mr. Chow - Indian & Chinese</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Order Online
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!--Image Gallery-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 cover-col">
+          <img
+            src="https://b.zmtcdn.com/data/pictures/5/18870815/89c533854b5bfa788010c3c12714eb43.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+            class="cover-img"
+          />
+        </div>
+        <div class="col-md-3 cover-col">
+          <img
+            src="https://b.zmtcdn.com/data/pictures/5/18870815/697333b7f1a17817fc1799cb60c92f9a.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*"
+            class="small-cover-img"
+          />
+
+          <img
+            src="https://b.zmtcdn.com/data/reviews_photos/03d/49438175fee3c56992336cee4b7ac03d_1625404106.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*"
+            class="small-cover-img"
+          />
+        </div>
+        <div class="col-md-3 cover-col">
+          <img
+            src="https://b.zmtcdn.com/data/reviews_photos/a1f/9ef89c60d181c2810b2a778755437a1f_1611398021.jpg?output-format=webp&fit=around|300:273&crop=300:273;*,*"
+            class="small-cover-img"
+          />
+
+          <div
+            style="
+              display: flex;
+              width: 100%;
+              height: 195px;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              color: white;
+              margin-top: 5px;
+              background-color: rgb(173, 173, 173);
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sticky-top">
+      <!--Sticky Top Info-->
+      <div class="row mt-2" style="background-color: white">
+        <div class="col-md-6 mt-2">
+          <h2 id="restuarant-name">Mr. Chow - Indian & Chinese</h2>
+          <div style="color: #9c9c9c">
+            <div>Chinese, North Indian, Biryani</div>
+            <div>Telipara</div>
+            <div>
+              12noon – 11pm (Today) &nbsp;
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#9C9C9C"
+                width="14"
+                height="14"
+                viewBox="0 0 20 20"
+                aria-labelledby="icon-svg-title- icon-svg-desc-"
+                role="img"
+                class="rbbb40-0 hoSSCx"
+              >
+                <title>info-line</title>
+                <path
+                  d="M12.26 15.24c-0.48 0.18-0.88 0.34-1.16 0.44-0.275 0.090-0.592 0.142-0.92 0.142-0.035 0-0.070-0.001-0.105-0.002l0.005 0c-0.042 0.003-0.091 0.005-0.141 0.005-0.469 0-0.901-0.16-1.244-0.428l0.004 0.003c-0.307-0.259-0.501-0.643-0.501-1.073 0-0.017 0-0.033 0.001-0.049l-0 0.002c-0.006-0.078-0.010-0.168-0.010-0.26s0.004-0.182 0.011-0.272l-0.001 0.012c0-0.18 0.060-0.38 0.12-0.62l0.6-2.16c0.060-0.2 0.1-0.4 0.14-0.6 0.034-0.149 0.056-0.321 0.060-0.497l0-0.003c0.004-0.030 0.006-0.064 0.006-0.099 0-0.182-0.063-0.35-0.168-0.483l0.001 0.002c-0.152-0.105-0.339-0.167-0.542-0.167-0.042 0-0.083 0.003-0.123 0.008l0.005-0.001c-0.009-0-0.020-0-0.031-0-0.16 0-0.314 0.022-0.461 0.063l0.012-0.003-0.44 0.16 0.24-0.66c0.4-0.16 0.8-0.3 1.16-0.42 0.311-0.101 0.668-0.159 1.039-0.16h0.001c0.011-0 0.024-0 0.036-0 0.489 0 0.938 0.174 1.287 0.463l-0.003-0.003c0.295 0.261 0.48 0.641 0.48 1.065 0 0.012-0 0.025-0 0.037l0-0.002c0 0.1 0 0.26 0 0.5-0.020 0.243-0.062 0.468-0.126 0.684l0.006-0.024-0.62 2.14c-0.043 0.159-0.085 0.362-0.116 0.568l-0.004 0.032c-0.032 0.153-0.054 0.332-0.060 0.515l-0 0.005c-0.003 0.027-0.005 0.058-0.005 0.090 0 0.188 0.070 0.36 0.186 0.491l-0.001-0.001c0.158 0.093 0.348 0.148 0.55 0.148 0.046 0 0.091-0.003 0.135-0.008l-0.005 0.001c0.014 0 0.031 0.001 0.047 0.001 0.161 0 0.317-0.022 0.465-0.064l-0.012 0.003c0.156-0.041 0.289-0.089 0.416-0.147l-0.016 0.007zM12.16 6.48c-0.27 0.249-0.632 0.402-1.030 0.402s-0.76-0.153-1.031-0.403l0.001 0.001c-0.254-0.238-0.413-0.575-0.413-0.95s0.158-0.712 0.412-0.949l0.001-0.001c0.27-0.249 0.632-0.402 1.030-0.402s0.76 0.153 1.031 0.403l-0.001-0.001c0.254 0.238 0.413 0.575 0.413 0.95s-0.158 0.712-0.412 0.949l-0.001 0.001zM10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c0-5.523-4.477-10-10-10v0zM10 18.58c-4.739 0-8.58-3.841-8.58-8.58s3.841-8.58 8.58-8.58c4.739 0 8.58 3.841 8.58 8.58v0c0 4.739-3.841 8.58-8.58 8.58v0z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 offset-md-2 mt-2"></div>
+        <div class="col-md-2 mt-2">
+          <div style="display: flex; align-items: center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="rating"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V16.6667C0 18.5 1.5 20 3.33333 20H16.6667C18.5 20 20 18.5 20 16.6667V3.33333C20 1.5 18.5 0 16.6667 0ZM16.6667 8.75L13.5833 11.5L14.5 15.5833C14.5833 15.9167 14.5 16.1667 14.25 16.4167C14.1667 16.5 14 16.5833 13.8333 16.5833C13.6667 16.5833 13.5833 16.5833 13.4167 16.5L10 14.25L6.58333 16.3333C6.33333 16.5 6 16.5 5.75 16.3333C5.5 16.1667 5.41667 15.8333 5.5 15.5L6.41667 11.5L3.33333 8.75C3.08333 8.5 3 8.25 3.08333 7.91667C3.16667 7.66667 3.41667 7.41667 3.75 7.41667L7.75 7L9.33333 3.16667C9.41667 3 9.58333 2.83333 9.75 2.75C10.0833 2.58333 10.5833 2.75 10.6667 3.16667L12.25 7L16.25 7.33333C16.5833 7.33333 16.8333 7.58333 16.9167 7.83333C17 8.16667 16.9167 8.5 16.6667 8.75Z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="rating"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V16.6667C0 18.5 1.5 20 3.33333 20H16.6667C18.5 20 20 18.5 20 16.6667V3.33333C20 1.5 18.5 0 16.6667 0ZM16.6667 8.75L13.5833 11.5L14.5 15.5833C14.5833 15.9167 14.5 16.1667 14.25 16.4167C14.1667 16.5 14 16.5833 13.8333 16.5833C13.6667 16.5833 13.5833 16.5833 13.4167 16.5L10 14.25L6.58333 16.3333C6.33333 16.5 6 16.5 5.75 16.3333C5.5 16.1667 5.41667 15.8333 5.5 15.5L6.41667 11.5L3.33333 8.75C3.08333 8.5 3 8.25 3.08333 7.91667C3.16667 7.66667 3.41667 7.41667 3.75 7.41667L7.75 7L9.33333 3.16667C9.41667 3 9.58333 2.83333 9.75 2.75C10.0833 2.58333 10.5833 2.75 10.6667 3.16667L12.25 7L16.25 7.33333C16.5833 7.33333 16.8333 7.58333 16.9167 7.83333C17 8.16667 16.9167 8.5 16.6667 8.75Z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="rating"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V16.6667C0 18.5 1.5 20 3.33333 20H16.6667C18.5 20 20 18.5 20 16.6667V3.33333C20 1.5 18.5 0 16.6667 0ZM16.6667 8.75L13.5833 11.5L14.5 15.5833C14.5833 15.9167 14.5 16.1667 14.25 16.4167C14.1667 16.5 14 16.5833 13.8333 16.5833C13.6667 16.5833 13.5833 16.5833 13.4167 16.5L10 14.25L6.58333 16.3333C6.33333 16.5 6 16.5 5.75 16.3333C5.5 16.1667 5.41667 15.8333 5.5 15.5L6.41667 11.5L3.33333 8.75C3.08333 8.5 3 8.25 3.08333 7.91667C3.16667 7.66667 3.41667 7.41667 3.75 7.41667L7.75 7L9.33333 3.16667C9.41667 3 9.58333 2.83333 9.75 2.75C10.0833 2.58333 10.5833 2.75 10.6667 3.16667L12.25 7L16.25 7.33333C16.5833 7.33333 16.8333 7.58333 16.9167 7.83333C17 8.16667 16.9167 8.5 16.6667 8.75Z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="rating"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V16.6667C0 18.5 1.5 20 3.33333 20H16.6667C18.5 20 20 18.5 20 16.6667V3.33333C20 1.5 18.5 0 16.6667 0ZM16.6667 8.75L13.5833 11.5L14.5 15.5833C14.5833 15.9167 14.5 16.1667 14.25 16.4167C14.1667 16.5 14 16.5833 13.8333 16.5833C13.6667 16.5833 13.5833 16.5833 13.4167 16.5L10 14.25L6.58333 16.3333C6.33333 16.5 6 16.5 5.75 16.3333C5.5 16.1667 5.41667 15.8333 5.5 15.5L6.41667 11.5L3.33333 8.75C3.08333 8.5 3 8.25 3.08333 7.91667C3.16667 7.66667 3.41667 7.41667 3.75 7.41667L7.75 7L9.33333 3.16667C9.41667 3 9.58333 2.83333 9.75 2.75C10.0833 2.58333 10.5833 2.75 10.6667 3.16667L12.25 7L16.25 7.33333C16.5833 7.33333 16.8333 7.58333 16.9167 7.83333C17 8.16667 16.9167 8.5 16.6667 8.75Z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+              class="rating"
+            >
+              <defs>
+                <linearGradient id="grad1">
+                  <stop
+                    offset="30%"
+                    style="stop-color: rgb(226, 55, 68); stop-opacity: 1"
+                  />
+                  <stop
+                    style="stop-color: rgb(207, 207, 207); stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill="url(#grad1)"
+                d="M16.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V16.6667C0 18.5 1.5 20 3.33333 20H16.6667C18.5 20 20 18.5 20 16.6667V3.33333C20 1.5 18.5 0 16.6667 0ZM16.6667 8.75L13.5833 11.5L14.5 15.5833C14.5833 15.9167 14.5 16.1667 14.25 16.4167C14.1667 16.5 14 16.5833 13.8333 16.5833C13.6667 16.5833 13.5833 16.5833 13.4167 16.5L10 14.25L6.58333 16.3333C6.33333 16.5 6 16.5 5.75 16.3333C5.5 16.1667 5.41667 15.8333 5.5 15.5L6.41667 11.5L3.33333 8.75C3.08333 8.5 3 8.25 3.08333 7.91667C3.16667 7.66667 3.41667 7.41667 3.75 7.41667L7.75 7L9.33333 3.16667C9.41667 3 9.58333 2.83333 9.75 2.75C10.0833 2.58333 10.5833 2.75 10.6667 3.16667L12.25 7L16.25 7.33333C16.5833 7.33333 16.8333 7.58333 16.9167 7.83333C17 8.16667 16.9167 8.5 16.6667 8.75Z"
+              ></path>
+            </svg>
+            &nbsp 4.3
+          </div>
+          <p
+            style="font-size: small; text-decoration: underline dotted grey"
+            class="text-muted mt-1"
+          >
+            7834 Delivery Reviews
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!--Buttons-->
+      <div class="row mt-2">
+        <div class="col-md-12">
+          <button
+            type="button"
+            class="btn btn-outline-secondary shadow-none btn-rest"
+            id="btn-review"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#FFFFFF"
+              width="10"
+              height="10"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+            >
+              <title>star-empty</title>
+              <path
+                d="M10 3.28l1.9 4.12 0.32 0.7 0.76 0.1 4.5 0.68-3.3 3.38-0.46 0.54 0.1 0.7 0.78 4.66-3.9-2.14-0.7-0.36-0.7 0.38-3.88 2.1 0.76-4.66 0.1-0.68-0.5-0.52-3.3-3.38 5.26-0.8 0.32-0.7 1.94-4.12zM6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z"
+              ></path>
+            </svg>
+            Add Review
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary shadow-none btn-rest"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#ED5A6B"
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+            >
+              <title>direction-line</title>
+              <path
+                d="M19.2 8.44l-7.22-7.22c-0.52-0.48-1.2-0.8-1.98-0.8s-1.46 0.32-1.98 0.8v0l-7.2 7.22c-0.52 0.5-0.82 1.2-0.82 1.98s0.3 1.46 0.82 1.98l7.2 7.2c0.5 0.52 1.2 0.82 1.98 0.82s1.48-0.3 1.98-0.82l7.22-7.2c0.5-0.52 0.8-1.22 0.8-1.98s-0.3-1.48-0.8-1.98v0zM18.16 11.38l-7.2 7.2c-0.24 0.24-0.58 0.38-0.94 0.38s-0.72-0.14-0.96-0.38v0l-7.22-7.2c-0.24-0.24-0.4-0.58-0.4-0.96s0.16-0.7 0.4-0.94v0l7.2-7.22c0.24-0.24 0.58-0.4 0.96-0.4s0.7 0.16 0.94 0.4l7.2 7.2c0.24 0.24 0.4 0.58 0.4 0.94s-0.16 0.72-0.4 0.96v0zM12.2 6.96c-0.040-0.040-0.080-0.060-0.12-0.060-0.1 0-0.18 0.080-0.18 0.18 0 0 0 0 0 0v0 1.66h-3.56c-1.18 0-2.14 0.96-2.14 2.16v0 2.38c0 0.26 0.2 0.46 0.46 0.46v0h0.48c0.26 0 0.48-0.2 0.48-0.46v0-2.38c0-0.4 0.32-0.72 0.72-0.72h3.56v1.66c0 0 0 0 0 0 0 0.1 0.080 0.18 0.18 0.18 0.040 0 0.080-0.020 0.12-0.060v0l2.34-2.32c0.040-0.040 0.080-0.1 0.080-0.18s-0.040-0.12-0.080-0.16v0z"
+              ></path>
+            </svg>
+            Direction
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary shadow-none btn-rest"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#F57082"
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+            >
+              <title>bookmark-add</title>
+              <path
+                d="M12.38 7.8h-1.66v-1.68c0-0.26-0.22-0.46-0.48-0.46v0h-0.48c-0.26 0-0.48 0.2-0.48 0.46v0 1.68h-1.66c-0.26 0-0.48 0.2-0.48 0.48v0 0.46c0 0.28 0.22 0.48 0.48 0.48v0h1.66v1.68c0 0.26 0.22 0.46 0.48 0.46v0h0.48c0.26 0 0.48-0.2 0.48-0.46v0-1.68h1.66c0.26 0 0.48-0.2 0.48-0.48v0-0.46c0-0.28-0.22-0.48-0.48-0.48v0zM15.020 0.9h-10.020c-1.060 0-1.92 0.84-1.92 1.9v0 16.42c0 0.28 0.16 0.5 0.36 0.62v0c0.12 0.060 0.24 0.1 0.38 0.1s0.24-0.040 0.36-0.1v0l5.82-3.52 5.82 3.52c0.1 0.060 0.24 0.1 0.38 0.1v0c0 0 0 0 0 0 0.12 0 0.24-0.040 0.34-0.1v0c0.22-0.12 0.36-0.34 0.36-0.62v-16.46c-0.020-1.040-0.86-1.86-1.88-1.86v0zM15.48 17.96l-5.1-3.080c-0.12-0.060-0.24-0.1-0.38-0.1s-0.26 0.040-0.38 0.1v0l-5.1 3.080v-15.24c0.040-0.22 0.22-0.4 0.46-0.4 0 0 0 0 0.020 0v0h10.020c0 0 0 0 0 0 0.24 0 0.44 0.2 0.46 0.44v0z"
+              ></path>
+            </svg>
+            Bookmark
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary shadow-none btn-rest"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#F57082"
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              aria-labelledby="icon-svg-title- icon-svg-desc-"
+              role="img"
+            >
+              <title>share</title>
+              <path
+                d="M0.72 19.94c-0.020 0-0.060 0-0.080 0s-0.060 0-0.080 0v0c-0.32-0.080-0.56-0.36-0.56-0.7 0 0 0 0 0-0.020v0c0-10.1 6.32-12.92 9.52-13.28v-4.34c0 0 0 0 0 0 0-0.38 0.32-0.7 0.72-0.7 0.18 0 0.36 0.060 0.48 0.18v0l9.060 8.32c0.14 0.14 0.22 0.34 0.22 0.54v0c0 0.2-0.1 0.4-0.24 0.52v0l-9.040 8.12c-0.12 0.1-0.3 0.18-0.46 0.18-0.12 0-0.22-0.040-0.32-0.080h0.020c-0.26-0.1-0.44-0.36-0.44-0.64v-4.3c-3.66 0.22-6.74 2.48-8.12 5.66l-0.020 0.060c-0.1 0.28-0.36 0.48-0.66 0.48v0zM10.24 12.32c0.4 0 0.72 0.32 0.72 0.72v0 3.4l7.26-6.5-7.26-6.66v3.32c0 0.4-0.32 0.72-0.72 0.72v0c-2.18 0-7.48 1.7-8.58 9 2.060-2.46 5.14-4 8.56-4 0.020 0 0.020 0 0.020 0v0z"
+              ></path>
+            </svg>
+            Share
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-4 sticky-top" style="background-color: white">
+      <div
+        class="nav-tabs row"
+        style="border-bottom: 2px solid rgb(207, 207, 207)"
+      >
+        <div
+          class="nav-item col-md-2 order-review"
+          style="
+            color: rgb(245, 112, 130);
+            border-bottom: 2px solid rgb(245, 112, 130);
+          "
+        >
+          <h5>&nbsp; Order Online</h5>
+        </div>
+        <div
+          class="nav-item col-md-2 order-review"
+          style="color: rgb(105, 105, 105)"
+        >
+          <h5>&nbsp;Reviews</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-3">
+      <div class="row">
+        <nav
+          class="col-md-3 menu-scroll"
+          id="Scrollspy"
+          style="position: relative; overflow-y: scroll; height: 68vh"
+        >
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link menu-section" href="#recommended"
+                >Recommended</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-section" href="#noodles">Noodles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-section" href="#fried-rice">Fried Rice</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-section" href="#soups">Soups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-section" href="#starters">Starters</a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="col-md-9 menu-scroll"
+          style="position: relative; overflow-y: scroll; height: 68vh"
+          data-bs-spy="scroll"
+          data-bs-target="#Scrollspy"
+          data-bs-offset="1"
+        >
+          <div id="recommended">
+            <h3 class="sticky-top pb-2" style="background-color: white">
+              Recommended
+            </h3>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <br />
+          </div>
+          <div id="noodles">
+            <h3 class="sticky-top pb-2" style="background-color: white">
+              Noodles
+            </h3>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <br />
+          </div>
+          <div id="fried-rice">
+            <h3 class="sticky-top pb-2" style="background-color: white">
+              Fried Rice
+            </h3>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <br />
+          </div>
+          <div id="soups">
+            <h3 class="sticky-top pb-2" style="background-color: white">
+              Soups
+            </h3>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <br />
+          </div>
+          <div id="starters">
+            <h3 class="sticky-top pb-2" style="background-color: white">
+              Starters
+            </h3>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <div class="menu-item">
+              <img />
+              <h5>Item Name</h5>
+              <p>₹339</p>
+              <button>Add</button>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Javascript Imports-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

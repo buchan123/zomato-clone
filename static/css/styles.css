@@ -199,3 +199,73 @@ h5 {
 #myBtn:hover {
   background-color: rgb(245, 90, 107);
 }
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: grey;
+}
+
+.breadcrumb-link:hover {
+  color: rgb(245, 112, 130);
+}
+.breadcrumb-item {
+  font-size: 0.8rem;
+}
+
+.cover-img {
+  height: 400px;
+  width: 100%;
+  object-fit: fill;
+  padding-top: 5px;
+}
+
+.small-cover-img {
+  height: 200px;
+  width: 100%;
+  object-fit: fill;
+  padding-top: 5px;
+}
+
+.cover-col {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+.btn-rest {
+  color: rgb(84, 84, 84);
+}
+
+#btn-review {
+  color: white;
+  background-color: #f57082;
+}
+
+.order-review {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.menu-section,
+.menu-section:hover {
+  color: black;
+}
+
+.nav-pills .nav-link.active {
+  color: rgb(237, 90, 107);
+  border-right: 3px solid rgb(237, 90, 107);
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(247, 235, 236));
+  transition: linear;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
+
+.section-sticky {
+  background-color: white;
+  position: sticky;
+}
